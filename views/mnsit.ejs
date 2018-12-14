@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> </script>
+    <title>MNIST</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <center>
+        <div id="board">
+            <canvas id="myCanvas" width="400px" height="400px">
+                Sorry, your browser doesn't support canvas technology.
+            </canvas>
+        </div><!-- END board -->
+        <button type="button" onclick="capture()" name="button">Predict</button>
+        <button type="button" onclick="erase()" name="button">Clear</button>
+        <p id="results"></p>
+    </center>
+    <script src="javascripts/app.js"></script>
+</body>
+
+</html>

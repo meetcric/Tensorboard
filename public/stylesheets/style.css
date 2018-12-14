@@ -1,0 +1,27 @@
+body {
+        margin: 0;
+}
+
+#board {
+        margin: 0 auto;
+        width: 500px;
+}
+
+#myCanvas {
+        border: 3px solid #000;
+}
+
+#myForm {
+    display: none;
+}
+
+#results{
+    width: 200px;
+    font-size: 100px;
+    height: 130px;
+    max-height: 200px;
+    border: 3px solid red;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
