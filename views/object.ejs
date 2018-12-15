@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
-        <link rel="stylesheet" href="/stylesheets/object.css">
-    </head>
-    <body>
-        <center>
-            <div class="container">
-                <video autoplay="true" id="video">
 
-                </video>
-            </div>
-        </center>
-        <script type="text/javascript" src="/javascripts/object.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+    <link rel="stylesheet" href="/stylesheets/object.css">
+</head>
+
+<body>
+<canvas id="canvas1"></canvas><br>
+<button onclick="stopGrabFrame()">Stop</button>
+<script type="text/javascript" src="/javascripts/object.js"></script>
+</body>
+
 </html>
