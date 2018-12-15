@@ -20,7 +20,7 @@ function gotMedia(mediastream) {
     imageCapture.grabFrame()
       .then(processFrame)
       .catch(err => console.error('grabFrame() failed: ', err));
-  }, 100);
+  }, 500);
 }
 
 function processFrame(imgData) {
@@ -29,14 +29,16 @@ function processFrame(imgData) {
 
   var t = canvas.getContext('2d');
   t.drawImage(imgData, 0, 0);
-
+  t.lineWidth = 10;
+  t.strokeStyle = "#00b33c";
+  t.fillStyle = "#cc3300";
+  t.font = "30px Arial";
   var ImageData = t.getImageData(0, 0, canvas.width, canvas.height);
   model.detect(ImageData).then(function(prediction){
-      t.lineWidth = 10;
-      t.strokeStyle = "#00b33c"
-      t.font = "30px Arial";
-      t.strokeRect((prediction[0].bbox)[0], (prediction[0].bbox)[1], (prediction[0].bbox)[2], (prediction[0].bbox)[3])
-      t.fillText(prediction[0].class, (prediction[0].bbox)[0], (prediction[0].bbox)[1]);
+      for (var i = 0; i < prediction.length; i++) {
+          t.strokeRect((prediction[i].bbox)[0], (prediction[i].bbox)[1], (prediction[i].bbox)[2], (prediction[i].bbox)[3])
+          t.fillText(prediction[i].class, (prediction[i].bbox)[0], (prediction[i].bbox)[1]);
+      }
   });
 }
 
