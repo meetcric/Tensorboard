@@ -1,5 +1,6 @@
 # mnist
- a simple Node.js application that recognizes hand-written numbers using tensorflow.js 
+ A web-app to recognize hand written digits or written by user on the given drawing board.
+ Developed on Express Framework(Node.js) it uses Tensorflow.js to load the Deep Learning Model.
 # Setting up project
 There are intstruction to set-up project locally
 
